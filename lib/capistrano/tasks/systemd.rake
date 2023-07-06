@@ -54,7 +54,7 @@ namespace :sidekiq do
             if running.zero?
               info colors.colorize("✔ Process ##{process}: No running workers. Shutting down for restart!", :green)
             else
-              info colors.colorize("⧗ Process ##{process}: Waiting for #{running} workers.", :yellow)
+              info colors.colorize("⌛ Process ##{process}: Waiting for #{running} workers.", :yellow)
               sleep(1)
             end
           end
