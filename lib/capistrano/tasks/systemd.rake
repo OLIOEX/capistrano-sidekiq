@@ -52,9 +52,9 @@ namespace :sidekiq do
 
             colors = SSHKit::Color.new($stdout)
             if running.zero?
-              info colors.colorize("✔ Process ##{process}: No running workers. Shutting down for restart!", :green)
+              info colors.colorize("Process ##{process}: No running workers. Shutting down for restart!", :green)
             else
-              info colors.colorize("⌛ Process ##{process}: Waiting for #{running} workers.", :yellow)
+              info colors.colorize("Process ##{process}: Waiting for #{running} workers.", :yellow)
               sleep(1)
             end
           end
